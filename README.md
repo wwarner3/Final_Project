@@ -1,7 +1,8 @@
 # Final_Project
 
-In this program I have written is combination of object oriatined, vector, map,Classes, ofstream, sstream.
+In this program I have written a combination of object oriented, vector, map, Classes, ofstream, sstream.
 
-The program is meant to read in a text file that is arrangent like the given circuit.dat file.
+The program is meant to read in a text file that is arranged like the given circuit.dat file.
 
-After the Calculation is peformed then it will display information about your current circuit.
+After the Calculation it will display information about your circuit.
+
