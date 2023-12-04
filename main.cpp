@@ -11,7 +11,7 @@ using namespace std;
 class Component{
 
 	public:
-		Component() : type("") {}  // , node1(0), node2(0), value(0.0) {} 
+		Component() : type(""), node1(0), node2(0), value(0.0) ,metric(""), status("") {} 
 		
 		void  setTYPE(string t){ type = t; }
 			string getTYPE() { return(type);}
@@ -83,6 +83,7 @@ double CalculateRTOT(vector<Component> components){
 	double Rtot = 0.0;
 	double Rs = 0.0;
 	double Rp = 0.0;
+	bool P = false;
 	
 	for(Component component : components){
 
@@ -94,12 +95,13 @@ double CalculateRTOT(vector<Component> components){
 			}
 
 			if(component.getSTATUS()[0] == 'P' || component.getSTATUS()[0] == 'p'){
+				 P = true; 
 				Rp += (1.0 / component.getVALUE());	
 			}
 
 		}
 	}
-	Rp = pow(Rp,-1);
+	if(P == true ) {Rp = pow(Rp,-1);}
 
 	Rtot = Rs + Rp;
 
